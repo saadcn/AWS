@@ -4,3 +4,40 @@ Buying Options:
 1. On Demand - Allows to pay a fixed rate by hour.
 2. Reserved - Allows you to reserve an instance for 1 or 3 years term.
 3. Spot - Instance can be purchased by setting a bid.
+
+Defaults:
+1. EC2 instances belong to a certain region.
+2. We can see the service status and the availability zones.
+3. There is always a default security group created for the users.
+
+
+AMI:
+1. AMI = Amazon machine instance.
+2. We can select "Free tier only" checkbox so we wont get non free tier AMI listed.
+3. Virtualization types can be : HVM = Hardware virtual machine, PV...
+4. More about virtualization types ......
+5. We can see various params for AMI that are : Family(General purpose, Compute optimized, GPU , Memory Optimized....) , 
+Type, vCPU(number of virtual cpu), Internal storage, EBS optimized, Network performance, IPV6 compatibility.
+6. Multiple instances can be launched 
+7. we can request a spot instance.
+8. Each API is launched in a VPC and is a part of a subnet.
+9. we can assign a role to an instance to give it access to other AWS.
+10. we can add boot time scripts to instances.
+11. We can add storage to our EC2. The root volume has the OS installed. By default the volume get deleted based on 
+"Delete on Termination" flag.
+12. Root volume is not encrypted by default. Others can be.
+13. If you forget your private secret access key for your EC2 then you cannot get it back.
+14. you can create new keys but the access key can be assigned to EC2 only at the time of creation.
+15. Instances with termination protection ON cannot be terminated before you change it in settings.
+
+AMI Login:
+1. Login command for AMI us ssh ec2-user@<public-ip> -i <Key>.
+2. The permissions on key should be 700/600 or no permissions to others.
+3. We can SSH using a pem file on Mac/Linux. For windows putty you need to use putty keygen to change the PEM file to a PPK file.
+
+
+AMI Types:
+
+
+
+
