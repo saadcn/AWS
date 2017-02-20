@@ -1,0 +1,42 @@
+IAM Notes:
+
+1. IAM is global and all the users you create are available throughout the world.
+2. Your aws account number can be accessed by going to account. it is available on the IAM user sign in link if its not changed.
+
+Users:
+1. Every user has a access key id and a secret access key that are used to programatically access aws services.
+2. Users can also login to console if they have permissions using their username and password.
+3. Access keys can only be accessed while creating them or while creating user.
+4. Permissions can be given to users and groups both.
+5. Access keys can be deleted or made inactive at anytime using console.
+
+Policy :
+Policy documents are made up of a Json.
+
+Roles: 
+1. A role allows one AWS service to another.
+2. Secret access keys -> Users login, Roles -> AWS services interactions, permissions -> user/group to access aws services.
+3. Roles can give you cross account access and Identity provider access.
+
+Identity Fedaration:
+1. IDF can be used to login to AWS.
+2.Federated identity management (FIM) is an arrangement that can be made among multiple enterprises that lets subscribers use 
+the same identification data to obtain access to the networks of all enterprises in the group. The use of such a system is 
+sometimes called identity federation.
+
+ADF AWS:
+1. User can sign in to their AWS accounts using active directory fedaration using their organizations AD.
+2. Organizations provide users a link to access AWS, when user logs in using his AD creds they send user back
+a SAML assertion.
+3. Users browser posts the SAML to AWS sign in endpoint(https://signin.aws.amazon.com/saml) and then calls the 
+AssumeRoleWithSAML api to log him in to AWS by construsting a sign in link for him.
+
+WIF(Web identity fedaration) AWS:
+1. WIF is very similar to ADF but in this case we have many identity providers where you can logon.
+2. Once logon you get temperory security creds from the IDP and you can use them to login to AWS.
+3. The API call is called assumeRoleWithWebIdentity.
+4. ARN = amazon resource name.
+
+
+
+

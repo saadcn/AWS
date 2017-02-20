@@ -1,0 +1,6 @@
+EC2-->
+
+Buying Options:
+1. On Demand - Allows to pay a fixed rate by hour.
+2. Reserved - Allows you to reserve an instance for 1 or 3 years term.
+3. Spot - Instance can be purchased by setting a bid.
