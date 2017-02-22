@@ -48,8 +48,40 @@ to see the s3 buckets
 9. IMPT: Its never recommended to save credentials in EC2.
 10. Its always much safer to give roles to your instances than saving credentials locally on EC2
 
+EC2 Instance Metadata:
+1. []# curl 169.254.169.254/latest/meta-data/ gives metadata
+2. you can use this in code where you need public  ip and other variables.
+
+Elastic loadbalancers:
+1. Elastic load balancers are not free
+2. you are charged on per hour and per GB basis.
+3. Before creating ELB you need to create listners.
+4. Listners check connections to load balancers.
+5. Its configured with a protoco and a port for front end and same for back end.
+6. Connection to load balancers are Http, Https, SSL, TCP .
+7. EC2 supports ports from 1-65535
+
 
 AMI Types:
+I - IOPS
+M - General Purpose
+T - Cheap General Purpose
+R - High Ram
+C - High compute
+G - Graphics
+D - Dense
+
+EBS Types:
+GP2 SSD - Up to 10k IOPS
+Provisiones IOPS IO1 - 10k+
+Magnetic - cheap, infrequently accessed
+
+
+One EBS can be mounted to only one EC2 at a time, for multiple mounting you can use EFS.
+
+Default region for all SDK is US-EAST-1
+
+
 
 
 
