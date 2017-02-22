@@ -12,6 +12,7 @@ Users:
 
 Policy :
 Policy documents are made up of a Json.
+Each group can have at most 10 policies attached.
 
 Roles: 
 1. A role allows one AWS service to another.

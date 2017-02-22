@@ -35,6 +35,19 @@ AMI Login:
 2. The permissions on key should be 700/600 or no permissions to others.
 3. We can SSH using a pem file on Mac/Linux. For windows putty you need to use putty keygen to change the PEM file to a PPK file.
 
+Accessing S3 from EC2:
+1. you will need a user who got access to S3. This can be done by creating a policy attached to user or his group.
+2. you can login to your EC2 and do : []#aws s3 ls 
+to see the s3 buckets
+3. your user secret keys should be present in the ~/.aws/credentials file if you want to see your s3 buckets.
+4. You can directly go to  ~/.aws/credentials and add your credentials or you can do : []#aws configure
+5. []#aws configure will ask you your users secret keys and region.
+6. To create an new bucket you can use : []#aws s3 mb s3://<bucketname>.
+7. IMPT: Bucket namespace is shared by all users so you cannot reuse a bucket already created. 
+8. Bucket names are always in lower cases.
+9. IMPT: Its never recommended to save credentials in EC2.
+10. Its always much safer to give roles to your instances than saving credentials locally on EC2
+
 
 AMI Types:
 
