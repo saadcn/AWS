@@ -1,0 +1,32 @@
+SQS Basics:
+1. SQS is first AWS created.
+2. SQS is used for queuing messages.
+3. e.g.User uploads image ---> SQS got new message ---> SQS sends to application server that message to perform an action.
+4. Messages can be 256 KB of text in any format.
+5. SQS does not guarantee the ordering of messages. If an application wants ordering then they have to add ordering mechanism 
+to each message.
+6. SQS is pull based rather than push.
+7. Message gets deleted from the queue only when its processed.
+8. Visibility timeout is the time frame given to a message when a component is processing message. During this time the
+message is not available to other components for processing. This prevents duplicate processing of message.
+9. Auto scaling is possible when a queue is growing to big to allow more processing units. All big websites use this.
+10. default visibility timeout 30 secs and max of 12 hours visibility timeout using changeMessageVisibility. At 
+least once delivery.
+11. you are billed every 64 kb chunks as a unit. if 256 = 4(64 kb each) requests billed.
+12. Long polling - if no messages in queue wait (20 secs default)
+13. Short polling - Polling after fixed interval.
+
+Some ARN formats :
+arn:partition:service:region:account-id:resource
+arn:partition:service:region:account-id:resourcetype/resource
+arn:partition:service:region:account-id:resourcetype:resource
+
+Examples :
+<!-- IAM user name -->
+arn:aws:iam::123456789012:user/David
+
+<!-- Amazon RDS instance used for tagging -->
+arn:aws:rds:eu-west-1:123456789012:db:mysql-db
+
+<!-- Object in an Amazon S3 bucket -->
+arn:aws:s3:::my_corporate_bucket/exampleobject.png	

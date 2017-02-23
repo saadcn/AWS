@@ -1,0 +1,59 @@
+S3 Basics:
+1. S3 is Object based storage rather than block based storage.
+2. File size min 0 bytes to 5 TBs.
+3. Unlimited storage.
+4. Files are stored in a bucket.
+5. S3 names should be unique globally.
+6. S3 bucket link : https://S3-<region>.amazonaws.com/<bucket name>
+example : https://s3-us-east-1.amazonaws.com/mybucket.
+7. S3 is key value based storage. every object has a key a value a version and metadata(date/time etc).
+8. S3 stores objects in alphabetical fashion.
+9. S3 also has ACL and torrent features.
+10. S3 guarantees for 99.9% availability and 99.9999999999% durability.
+11. S3 is designed for 99.99% availability.
+12. Tiered storage, Lifecycle management, Versioning, encryption, ACL and bucket policies.
+
+
+S3 Data consistency:
+1. Read over write for PUTS of new objects.
+2. Eventual consistency for modify or delete. ie you might get new data or you might get old data.
+3. All operations are atomic so you wont get mixed data of 2 commits.
+
+S3 Storage Tiers:
+1. S3 99.99% availability and 11x9 durability. Designed to sustained a loss of 2 facilities concurrently.
+ data is stored at multiple facilities.
+2. S3 - IA Infrequently accessed. 99.9% availability.
+3. RRS- Reduced redundancy storage with 99.99% durability. Thumbnails example. Can sustain loss of 1 facility.
+4. Glacier - Used for archival only. Accessing can take 3 to 5 hours.
+
+S3 Pricing: 
+1. You are charged for:
+	A. Size of data
+	B. Number of requests
+	C. Transfer Acceleration
+	D. Moving of data within locations.
+	E. Storage management Pricing
+	
+S3 Transfer Acceleration:
+1. Used to transfer data between s3 bucket and the users.
+2. Uses CloudFront edge locations to route data over optimized network paths.
+
+Note : Read S3 FAQ.
+
+S3 Create Bucket:
+1. If you want to switch between new and old console we can go to "Storage management" and opt in for new console.
+2. By default when we create a bucket its private by default and so are any objects inside it.
+3. bucket name cannot change once bucket is created.
+
+S3 Static Website:
+1. S3 website endpoint is like https://<bucketname>.s3-website.<region>@amazonaws.com
+2. Permissions are very important if you want to manage access to your s3 website to users.
+3. Website usually has 2 pages 1 main page and 1 error page.
+
+CORS S3:
+1. Used for accessing an s3 bucket from another bucket.
+2. For website url.
+3. Permissions --> cors --> paste url of the origin that wants to use this resource.
+
+
+
