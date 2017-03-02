@@ -1,0 +1,28 @@
+Dynamo DB Basics:
+1. No SQL non relational db.	
+2. Stored on SSDs.
+3. Stored at 3 different geographic locations.
+
+Consistency Models:
+1. Eventual consistent model(Default): Consistency is achieved within seconds. 
+2. Strong consistent read: Always consistent. Write before all reads.
+
+Structure:
+1. Items are json objects.
+2. Attributes are json attributes.
+3. We can have 35 level of nesting.
+
+Pricing:
+Pricing is done on transactions and duration of data kept.
+
+Types of Primary keys:
+1. Single Attribute Partition index - These are the hashed values of partition values that are unique.
+2. If two items have the same partition key then they should have a different sort key.
+3. All items with the same partition key will be store together with ordered sort keys.
+
+Indexes:
+1. Local secondary index: Same partition key and different sort key.
+2. Local secondary indexes cannot be added or removed later, they are created at the time of creating the table.
+3. Global secondary indexes can have different partition keys and different sort keys.
+
+
